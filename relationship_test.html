@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-
+    <meta charset="utf-8"> 
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -83,7 +82,6 @@
         console.log("the woman in the couple is " + couple[i].pname);
         }
     };
-
     /* this is the test for our couple. it tests if the man makes enough
     to remain appealing to his counterpart, if the combined income is above
     100 and if they are both nice enough to each other */
@@ -94,8 +92,8 @@
             }else {
                 return false;
             }
-            }else{
-            return false;
+        }else{
+        return false;
         }
     };
     var niceTest = function(){
@@ -105,7 +103,6 @@
             return false;
         }
     };
-
     var proximity = function(){
         if(couple[0].state == couple[1].state){
             return true;
@@ -113,7 +110,6 @@
             return false;
         }
     };
-
     var valueTest = function(){
         if (incomeCompare() && niceTest() && proximity() == true) {
             return "YES! This relationship looks good!";
