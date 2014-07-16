@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>relationship test</title>
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    //A constructor that makes people with the following values
+    function person(pname, sex, income, state, nice) {
+      this.pname = pname;
+      this.sex = sex;
+      this.income = income;
+      this.state = state;
+      this.nice = nice;
+    }
+    //we make all of our people
+    var Chris = new person("Chris","m",56,"Colorado",75);
+    var Cynthia = new person("Cynthia","f",40,"Colorado",75);
+    var Jonas = new person("Jonas","m",98,"Colorado",70);
+    var Susan = new person("Susan","f",67,"Colorado",56);
+    var Edward = new person("Edward","m",100,"Texas",100);
+    var Kristin = new person("Kristin","f",88,"Texas",75);
+    var cyclePeople = [Chris, Cynthia, Jonas, Susan, Edward, Kristin];
+    //we make three new arrays, sorting our men and women and one that holds a couple
+    var men = [];
+    var women = [];
+    var couple = [];
+    //sort the men and women into proper arrays
+    for(var i in cyclePeople){
+        if (cyclePeople[i].sex=="m"){
+            men.push(cyclePeople[i]);
+        }else if (cyclePeople[i].sex=="f"){
+            women.push(cyclePeople[i]);
+        }    
+    };
+    //functions pick one man and one woman to create a test
+    function pickMan(){
+        var numero = Math.random();
+        console.log("the guys' random number is " + numero);
+        if(numero <= 0.33) {
+            couple.push(men[0]);
+        }else if(numero <= 0.66){
+            couple.push(men[1]);
+        }else{
+            couple.push(men[2]);
+        }
+    };
+    function pickWoman(){
+        var numero = Math.random();
+        console.log("the girls' random number is " + numero);
+        if(numero <= 0.33) {
+            couple.push(women[0]);
+        }else if(numero <= 0.66){
+            couple.push(women[1]);
+        }else{
+            couple.push(women[2]);
+        }
+    };
+    //this gives the breakdown at this point
+    console.log("the men are ")
+    for (var i in men){
+        console.log(men[i]);
+    };
+    console.log("the women are ")
+    for (var i in women){
+        console.log(women[i]);
+    };
+    pickMan();
+    pickWoman();
+    for(var i in couple){
+        if (couple[i] == men[0] || couple[i] == men[1] || couple[i] == men[2]){
+        console.log("the man in the couple is " + couple[i].pname);
+        }else if(couple[i] == women[0] || couple[i] == women[1] || couple[i] == women[2]){
+        console.log("the woman in the couple is " + couple[i].pname);
+        }
+    };
+
+    /* this is the test for our couple. it tests if the man makes enough
+    to remain appealing to his counterpart, if the combined income is above
+    100 and if they are both nice enough to each other */
+    var incomeCompare = function(){
+        if(couple[0].income > couple[1].income){
+            if(couple[0].income + couple[1].income > 90){
+                return true;
+            }else {
+                return false;
+            }
+            }else{
+            return false;
+        }
+    };
+    var niceTest = function(){
+        if(couple[0].nice >= 75 && couple[1].nice >= 75){
+            return true;
+        }else{
+            return false;
+        }
+    };
+
+    var proximity = function(){
+        if(couple[0].state == couple[1].state){
+            return true;
+        }else{
+            return false;
+        }
+    };
+
+    var valueTest = function(){
+        if (incomeCompare() && niceTest() && proximity() == true) {
+            return "YES! This relationship looks good!";
+        } else {
+            return "they do not have a good chance at a successful relationship";
+        }
+    };
+alert("Our couple is " + couple[0].pname + " and " + couple[1].pname + " and " + valueTest());
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
