@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>THIS THIS THIS</title>
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+    var div = document.createElement("div");
+    div.id = "juicy";
+    div.name = "otter";
+    div.align = "left";
+    document.body.appendChild(div);
+    var node=document.createElement("p");
+    // var textnode=document.createTextNode(thenewskinny.typing);
+    var textnode=document.createTextNode("hello world");
+    node.appendChild(textnode);
+    div.appendChild(node);
+    function outputAttributes (element) {
+      var pairs = new Array(),
+          attrName,
+          attrValue,
+          i,
+          len;
+      for (i=0, len = element.attributes.length; i < len; i++){
+        attrName = element.attributes[i].nodeName;
+        attrValue = element.attributes[i].value;
+        pairs.push(attrName + "=\"" + attrValue + "\"");
+      }
+      console.log(pairs.join(" "));
+    }
+    outputAttributes(div);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

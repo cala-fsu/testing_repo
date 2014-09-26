@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>THIS THIS THIS</title>
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+</head>
+<body>
+  <ul id="ully">
+    <li>monkey</li>
+    <li>jorjg</li>
+    <li>sdlkfj</li>
+  </ul>
+  <input id="inputty" type="text" length="35"></input>
+  <button id="butter">Press me</button>
+  <p id="crazy"></p>
+    <script>
+    // var butter = document.getElementById("butter");
+    var ully = document.getElementById("ully");
+    var inputty = document.getElementById("inputty");
+    var thenewskinny = {typing: "kkkkkkkkkkk"};
+    //the commented sections will work just as well with JS instead of jQuery
+      // function doSomething(){
+      //   var node=document.createElement("LI");
+      //   // var textnode=document.createTextNode(thenewskinny.typing);
+      //   var textnode=document.createTextNode(inputty.value);
+      //   node.appendChild(textnode);
+      //   ully.appendChild(node);
+      // }
+      // butter.onclick = doSomething;
+      f= function (){$('#butter').delay(400).fadeTo(300,0.1);}
+      g= function (){$('#butter').delay(400).fadeTo(300,1);}
+      $('#ully').hover(f,g);
+      $('#butter').click(
+            function (e){
+            $("#crazy").load("loadtest.html");//not working in chrome for some reason
+            var node=document.createElement("LI");
+            // var textnode=document.createTextNode(thenewskinny.typing);
+            var textnode=document.createTextNode(inputty.value);
+            node.appendChild(textnode);
+            ully.appendChild(node);
+          });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

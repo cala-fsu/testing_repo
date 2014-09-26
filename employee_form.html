@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>EMPLOYEE FORM</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+  <form>
+        <p>First Name: <input type="text" name="firstNameControl" id="firstName" width="50"></input></p>
+        <p>Last Name: <input type="text" name="firstNameControl" id="lastName" width="50"></input></p>
+        <p>Birth Month:
+        <select name="birthMonthControl" id="birthMonth">
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+        </select></p>
+        <p>Birth Day: <input type="number" name="birthDayControl" id="birthDay" min="1" max="31"></input></p>
+        <p>Office Phone Number: <input type="text" name="officeNumberControl" id="officeNumber" width="7"></input></p>
+        <button id="submitty">here we go again</button>
+  </form>      
+  <script>
+    $('#submitty').click(function (e) {
+      e.preventDefault();
+      var employeeS = [];
+      function makeEmployeeObject(firstName, lastName, birthMonth, birthDay, officeNumber){
+      this.firstName = firstName,
+      this.lastName = lastName,
+      this.birthMonth = birthMonth,
+      this.birthDay = birthDay,
+      this.officeNumber = officeNumber
+      };
+      var birthDay = document.getElementById("birthDay").value;
+      var birthMonth = document.getElementById("birthMonth").value;
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var officeNumber = document.getElementById("officeNumber").value;
+      var employee = new makeEmployeeObject(firstName, lastName, birthMonth, birthDay, officeNumber);
+      employee = JSON.stringify(employee);
+//after this you now have a JSON object called employee
+      employeeS.push(employee);
+      function displayIt(){
+        for (var i in employeeS){ 
+          console.log(employeeS[i]);
+        };
+      };
+//displayIt is a temporary hold for the JSON object
+      displayIt();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

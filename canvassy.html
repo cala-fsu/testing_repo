@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {
+
+      title:{
+        text:"Workshop Attendees since 2009 by University"        
+
+      },
+      axisX:{
+        interval: 1,
+        gridThickness: 0,
+        labelFontSize: 10,
+        labelFontStyle: "normal",
+        labelFontWeight: "normal",
+        labelFontFamily: "Lucida Sans Unicode"
+
+      },
+      axisY2:{
+        interlacedColor: "rgba(1,77,101,.2)",
+        gridColor: "rgba(1,77,101,.1)"
+
+      },
+
+      data: [
+      {     
+        type: "bar",
+                name: "companies",
+        axisYType: "secondary",
+        color: "#014D65",       
+        dataPoints: [
+        
+        {y: 57, label: "FAMU"  },
+        {y: 49, label: "FAU"  },
+        {y: 48, label: "FGCU"  },
+        {y: 81, label: "FIU"  },
+        {y: 65, label: "FSU"  },
+        {y: 97, label: "UCF"  },
+        {y: 111, label: "UF"  },
+        {y: 48, label: "UNF"  },
+        {y: 76, label: "USF"  },
+        {y: 51, label: "UWF"  },
+        {y: 3, label: "New Coll."  },
+        {y: 4, label: "USF-SP"  },
+        {y: 7, label: "Outside" },
+        ]
+      }
+      
+      ]
+    });
+
+chart.render();
+}
+</script>
+<script type="text/javascript" src="assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>

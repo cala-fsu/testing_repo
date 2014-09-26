@@ -27,7 +27,7 @@
     var Jonas = new person("Jonas","m",98,"Colorado",70);
     var Susan = new person("Susan","f",67,"Colorado",56);
     var Edward = new person("Edward","m",100,"Texas",100);
-    var Kristin = new person("Kristin","f",88,"Texas",75);
+    var Julia = new person("Julia","f",40,"Colorado",75);
     var cyclePeople = [Chris, Cynthia, Jonas, Susan, Edward, Kristin];
     //we make three new arrays, sorting our men and women and one that holds a couple
     var men = [];
@@ -38,7 +38,7 @@
         if (cyclePeople[i].sex=="m"){
             men.push(cyclePeople[i]);
         }else if (cyclePeople[i].sex=="f"){
-            women.push(cyclePeople[i]);
+            women.push(cyclePeople[i].value);
         }    
     };
     //functions pick one man and one woman to create a test
@@ -89,7 +89,7 @@
         if(couple[0].income > couple[1].income){
             if(couple[0].income + couple[1].income > 90){
                 return true;
-            }else {
+            }else{
                 return false;
             }
         }else{
@@ -113,7 +113,7 @@
     var valueTest = function(){
         if (incomeCompare() && niceTest() && proximity() == true) {
             return "YES! This relationship looks good!";
-        } else {
+        }else{
             return "they do not have a good chance at a successful relationship";
         }
     };
