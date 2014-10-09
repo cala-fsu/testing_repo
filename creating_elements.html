@@ -26,26 +26,28 @@
     var inputty = document.getElementById("inputty");
     var thenewskinny = {typing: "kkkkkkkkkkk"};
     //the commented sections will work just as well with JS instead of jQuery
-      // function doSomething(){
-      //   var node=document.createElement("LI");
-      //   // var textnode=document.createTextNode(thenewskinny.typing);
-      //   var textnode=document.createTextNode(inputty.value);
-      //   node.appendChild(textnode);
-      //   ully.appendChild(node);
-      // }
-      // butter.onclick = doSomething;
-      f= function (){$('#butter').delay(400).fadeTo(300,0.1);}
-      g= function (){$('#butter').delay(400).fadeTo(300,1);}
-      $('#ully').hover(f,g);
-      $('#butter').click(
-            function (e){
-            $("#crazy").load("loadtest.html");//not working in chrome for some reason
-            var node=document.createElement("LI");
-            // var textnode=document.createTextNode(thenewskinny.typing);
-            var textnode=document.createTextNode(inputty.value);
-            node.appendChild(textnode);
-            ully.appendChild(node);
-          });
+    function doSomething(){
+      var node=document.createElement("LI");
+      // var textnode=document.createTextNode(thenewskinny.typing);
+      var textnode=document.createTextNode(inputty.value);
+      node.appendChild(textnode);
+      ully.appendChild(node);
+    }
+    butter.onclick = doSomething;
+
+    
+    f= function (){$('#butter').delay(400).fadeTo(300,0.1);}
+    g= function (){$('#butter').delay(400).fadeTo(300,1);}
+    $('#ully').hover(f,g);
+    $('#butter').click(
+          function (e){
+          $("#crazy").load("loadtest.html");//not working in chrome for some reason
+          var node=document.createElement("LI");
+          // var textnode=document.createTextNode(thenewskinny.typing);
+          var textnode=document.createTextNode(inputty.value);
+          node.appendChild(textnode);
+          ully.appendChild(node);
+        });
     </script>
 </body>
 </html>
