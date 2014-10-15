@@ -38,7 +38,6 @@
       var itemActiveSmallTextNode = document.createTextNode("Item Small Text Node.")
       var headline = document.createElement("H1");
       headline.appendChild(itemActiveSmallTextNode);
-      var paras = $(".hello > .item");
       $(".item_active").html(headline);
       $(".item").html("<p>1</p>");
       $(".item:nth-of-type(2)").html("<h1>2</h1>");
@@ -46,6 +45,9 @@
       $(".item:nth-of-type(4)").html("<p>4</p>");
       $(".item:nth-of-type(5)").html("<p>5</p>");
       //this code is flawed for a reason. so you can see how the selector is indexed
+      //the following code selects exactly the second occurrence
+      // var paras = $(".item");
+      // paras.eq(1).html("<p>let's see what this does</p>");
     }else {
       alert("more stuff");
     };
