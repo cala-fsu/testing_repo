@@ -12,7 +12,7 @@ function listIngredients(pname, quantity, units){
     units=="count";
   };
 };
-// Here is a jason string of recipes
+// Here is a JSON string of recipes
   recipes = [
     {
       "name": "Eggs Benedict",
