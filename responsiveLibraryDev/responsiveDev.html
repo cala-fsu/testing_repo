@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>THIS THIS THIS</title>
+    <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <style> 
+* {
+	box-sizing: border-box;
+}
+/* the purpose of that is so the border cuts into the width instead of adding to it */
+div.container {
+    width: 80em;
+    border: 1em solid;
+    margin-bottom: 1em;
+
+}
+
+div.box {
+    width: 25%;
+    border: 2em solid red;
+    float: left;
+}
+div.box2 {
+	width: 25%;
+	border: 0.5em solid red;
+}
+</style>
+</head>
+<body>
+
+	<!-- example of how the markup would look under the new system-->
+	<section id="jockStrap" custom-attribute="200,300,400,700,1200,1900,2010">
+	<!-- you actually need to accommodate 9 different widths. this example is 7 -->
+		<div id="jockStrapContainer">
+			<div id="jockStrapColumn" custom-attribute="a,a,a,6,6,4,4"></div>
+			<div id="jockStrapColumn" custom-attribute="a,a,a,6,6,4,4"></div>
+			<div id="jockStrapColumn" custom-attribute="a,a,a,a,a,4,4"></div>
+		</div>	
+	</section>
+	<!-- end of example markup -->
+
+	<div class="container">
+  <div class="box">This div occupies the left half.</div>
+  <div class="box">This div occupies the right half.</div>
+  <div class="box">This div occupies the right half.</div>
+<div class="box">This div occupies the right half.</div>
+  <div style="clear:both;"></div>
+</div>
+<div class="container">
+  <div class="box2">This div occupies the left half.</div>
+  <div class="box2">This div occupies the right half.</div>
+  <div class="box2">This div occupies the right half.</div>
+<div class="box2">This div occupies the right half.</div>
+                                                                                                                                     
+</div>
+
+</body>
+</html>
