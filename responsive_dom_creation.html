@@ -12,23 +12,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
 </head>
 <body>
-  <div class="hello">
-      <div class="item_active"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+  <div id="hello">
+      <div id="item_active"></div>
+      <div id="item"></div>
+      <div id="item"></div>
+      <div id="item"></div>
   </div>        
-  <div class="hello">
-      <div class="item_active"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+  <div id="hello">
+      <div id="item_active"></div>
+      <div id="item"></div>
+      <div id="item"></div>
+      <div id="item"></div>
   </div>
-  <div class="hello">
-      <div class="item_active"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+  <div id="hello">
+      <div id="item_active"></div>
+      <div id="item"></div>
+      <div id="item"></div>
+      <div id="item"></div>
   </div>
     <script>
     var headline = document.createElement("h1");
@@ -37,17 +37,21 @@
     }else if($(window).width() > 641 && $(window).width() < 1600){
       var itemActiveSmallTextNode = document.createTextNode("Item Small Text Node.")
       var headline = document.createElement("H1");
+      var itemLaxative = document.getElementById("item_active")
       headline.appendChild(itemActiveSmallTextNode);
+      itemLaxative.appendChild(headline);
       // $(".item_active").html(headline);
-      // $(".item").html("<p>1</p>");
-      // $(".item:nth-of-type(2)").html("<h1>2</h1>");
-      // $(".item:nth-of-type(3)").html("<p>3</p>");
-      // $(".item:nth-of-type(4)").html("<p>4</p>");
-      // $(".item:nth-of-type(5)").html("<p>5</p>");
+      $("#item").html("<p>1</p>");
+      $("#item:nth-of-type(2)").html("<h1>2</h1>");
+      $("#item:nth-of-type(3)").html("<p>3</p>");
+      $("#item:nth-of-type(4)").html("<p>4</p>");
+      $("#item:nth-of-type(5)").html("<p>5</p>");
       //this code is flawed for a reason. so you can see how the selector is indexed
       //the following code selects exactly the second occurrence and is zero-based.
-      var paras = $(".item");
-      paras.eq(1).html("<p>let's see what this does</p>");
+      // var paras = document.getElementById("item");
+      // paras.eq(1).html("<p>let's see what this does</p>"); actually this only works with class instead of id
+      // paras.eq(0).html("<p>yo yo yo</p>");
+      // paras.eq(2).html("<p>just sorting this out</p>");
     }else {
       alert("more stuff");
     };

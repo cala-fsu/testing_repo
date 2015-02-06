@@ -16,7 +16,7 @@
 	<form method="post" id="myForm">
 			<ul>
 				<li><input type="radio" name="color" value="red">Red</li>
-				<li><input type="radio" name="color" value="green">Green</li>
+				<li><input type="radio" name="color" value="green">Green</li><!--this is field, index is 1-->
 				<li><input type="radio" name="color" value="blue">Blue</li>
 				<li><input type="radio" name="color" value="brown">Brown</li>
 				<input type="submit" class="btn btn-default" value="Submit" id="the_button">
@@ -24,12 +24,12 @@
 	</form>
 <script>
 	var form = document.getElementById("myForm");
-	var field = form.elements[0];
+	var field = form.elements[4];
 	field.value = "Another value";
 	alert(field.form === form);
 	field.focus();
-	field.disabled = true;
-	field.type = "checkbox";
+	field.disabled = false;
+	// field.type = "checkbox";
 	EventUtil.addHandler(form, "submit", function(event){
 		event = EventUtil.getEvent(event);
 		var target = EventUtil.getTarget(event);

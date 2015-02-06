@@ -15,8 +15,9 @@
     <script>
     var div = document.createElement("div");
     div.id = "juicy";
-    div.name = "otter";
+    div.title = "otter";
     div.align = "left";
+    div.style = "width:300px";//this won't appear because it's not a recognized w3c attribute
     document.body.appendChild(div);
     var node=document.createElement("p");
     // var textnode=document.createTextNode(thenewskinny.typing);
@@ -35,14 +36,12 @@
         pairs.push(attrName + "=\"" + attrValue + "\"");
       }
       console.log(pairs.join(" "));
+
     }
     outputAttributes(div);
     </script>
 </body>
 </html>
-
-
-
 
 
 
